@@ -69,6 +69,7 @@ body {
   margin: 0 4px;
   border-radius: 4px;
   line-height: 1.6;
+  text-decoration: none;
 }
 
 #site-header nav a:hover {
@@ -142,20 +143,6 @@ img {
   color: hsl(220, 30%, 25%);
 }
 
-#chi-sono p:first-of-type::first-letter {
-  font-size: 3rem;
-  font-weight: bold;
-  float: left;
-  margin-right: 6px;
-  color: hsl(220, 60%, 30%);
-}
-
-
-/* Sezione successiva: clear del float dell'avatar */
-#competenze {
-  clear: both;
-}
-
 
 /* Lista competenze a righe alternate */
 .skill-list {
@@ -221,14 +208,23 @@ label {
 }
 
 input,
+#motivo,
 textarea {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
-  width: 60%;
+  font-size: 16px;
+  width: 100%;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
   background-color: #f5f7fb;
 }
 
+textarea {
+  height: 120px;
+}
+
 input:focus,
+#motivo:focus,
 textarea:focus {
   background-color: #ffffff;
   color: #000000;
@@ -236,6 +232,7 @@ textarea:focus {
 
 #consenso {
   width: auto;
+  height: auto;
 }
 
 input::placeholder,
@@ -248,7 +245,8 @@ button {
   color: #ffffff;
   background-color: hsl(220, 60%, 30%);
   font-weight: bold;
-  width: 30%;
+  font-size: 16px;
+  width: 100%;
   padding: 12px 24px;
   border: none;
   border-radius: 4px;
@@ -270,4 +268,39 @@ button:hover {
   font-size: 0.9rem;
   line-height: 2.4;
   padding: 30px 20px;
+}
+
+@media screen and (min-width:768px) {
+  #site-header {
+    padding: 60px 20px 40px;
+  }
+
+  body {
+    font-size: 20px;
+  }
+
+  .avatar {
+    float: left;
+    margin-right: 16px;
+  }
+
+  #chi-sono p:first-of-type::first-letter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: hsl(220, 60%, 30%);
+  }
+
+  input,
+  #motivo,
+  textarea {
+    width: 60%;
+  }
+
+  button {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  
 }
