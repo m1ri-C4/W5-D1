@@ -13,6 +13,11 @@ body {
   margin: 0;
 }
 
+html {
+  scroll-padding-top: 400px;
+  scroll-behavior: smooth;
+}
+
 
 /* Body: tipografia di base */
 body {
@@ -303,6 +308,17 @@ button {
   border: none;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color:#000000;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 button:hover {
