@@ -23,6 +23,21 @@ body {
   background-color: #fafafa;
 }
 
+/* Freccia su  */
+.back-to-top{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  text-align:center;
+  text-decoration:none;
+  font-size:30px;
+  background-color:blue;
+  color:white;
+  z-index: 50;
+}
 
 /* Header */
 #site-header {
@@ -35,6 +50,9 @@ body {
   line-height: 1.8;
   padding: 30px 16px 20px;
   border-bottom: 4px solid hsl(45, 90%, 60%);
+  position:sticky;
+  top:0;
+  z-index: 1000;
 }
 
 #site-header h1 {
@@ -166,6 +184,14 @@ img {
 
 
 /* Progetti alternati + tag NEW sul primo */
+
+.project {
+  position: relative;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
 .project:nth-of-type(odd) {
   background-color: hsl(45, 60%, 96%);
 }
@@ -174,9 +200,11 @@ img {
   background-color: #ffffff;
 }
 
-.project:first-of-type h3::after {
+.project:first-of-type ::after {
   content: "NEW";
-  display: inline-block;
+  position:absolute;
+  top: 0;
+  right: 0;
   padding: 2px 8px;
   margin-left: 12px;
   background-color: hsl(0, 70%, 50%);
