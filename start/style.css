@@ -344,6 +344,10 @@ button:hover {
     line-height: 2.4;
   }
 
+  body {
+    font-size: 18px;
+  }
+
   main {
     padding: 40px 20px;
   }
